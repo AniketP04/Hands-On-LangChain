@@ -1,4 +1,4 @@
-# LangChain
+# Hands-On-LangChain
 **LangChain** is a framework designed to simplify the development of applications powered by **language models** (like OpenAI’s GPT, Anthropic’s Claude, or open-source models like LLaMA and Falcon).  
 It provides modular components to help developers connect **LLMs, prompts, tools, memory, agents, retrievers, and more** into structured, production-ready pipelines.
 
@@ -30,14 +30,6 @@ It provides modular components to help developers connect **LLMs, prompts, tools
 - [Installation & Setup](#-installation--setup)
 - [Technologies Used](#-technologies-used)
 - [Contribution](#-contribution)
-
----
-
-## 🎯 Goals of This Repository
-
-- Learn and understand **LangChain’s main components** through practical coding examples.
-- Build small, functional mini-projects using these components.
-- Document the journey for **educational and reference** purposes.
 
 ---
 
