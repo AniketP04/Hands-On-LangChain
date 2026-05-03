@@ -45,7 +45,7 @@ It provides modular components to help developers connect **LLMs, prompts, tools
 
 This section focuses on **LangChain’s Model abstraction**, covering both **Language Models** and **Embedding Models**.
 
-#### 💬 Language Models | [LLMs](LLMs)
+#### 💬 [Language Models](LLMs)
 Explored how to use different types of language models for text generation and conversation.
 
 - **Closed-Source Models:**
@@ -61,7 +61,7 @@ Explored how to use different types of language models for text generation and c
 - Model invocation using `invoke()` and `stream()`
 - Comparing performance between models
 
-#### 🧭 Embedding Models
+#### 🧭 [Embedding Models](Embedding_Models)
 Explored how embeddings represent text as numerical vectors for semantic understanding.
 
 - **Closed-Source Embeddings:**
@@ -73,8 +73,6 @@ Explored how embeddings represent text as numerical vectors for semantic underst
 - Creating embeddings for text
 - Embedding documents and queries
 - Calculating similarity using **cosine similarity**
-
----
 
 ### 🧩 Semantic Search Example
 
@@ -92,7 +90,7 @@ Implemented a **simple semantic search** using OpenAI embeddings.
 
 ---
 
-### 🗣️ Prompts Component
+### 🗣️ [Prompts Component](Prompts)
 
 Learned about how **LangChain** manages and structures **prompts** — the input instructions given to language models.
 
@@ -111,9 +109,6 @@ Learned about how **LangChain** manages and structures **prompts** — the input
  - **HumanMessage** – user input
  - **AIMessage** - model response
 
----
-
-
 #### 🧠 Mini Projects
 - **Chatbot** — Built a simple chatbot using `ChatPromptTemplate` and message history.
 - **Research Paper Summarizer** — Created a summarization tool that accepts a research paper as input and outputs a concise summary using prompt templates.
@@ -127,7 +122,7 @@ Learned about how **LangChain** manages and structures **prompts** — the input
 ---
 
 
-### 📦 Structured Output
+### 📦 [Structured Output](Structured_Output)
 
 Explored how to get **structured and reliable outputs** from LLMs instead of free-form text.
 
@@ -158,7 +153,7 @@ Structured output ensures that responses from models can be programmatically par
 
   ---
 
-### 🧮 Output Parsers
+### 🧮 [Output Parsers](Output_Parsers)
 
 Learned about **Output Parsers** in LangChain, which help transform LLM text responses into structured formats for further processing.
 
@@ -188,7 +183,7 @@ print(result)
 
 --- 
 
-### 🔗 Chains Component
+### 🔗 [Chains Component](Chains)
 
 Chains are powerful abstractions that connect multiple components — **models, prompts, parsers, and logic** — into a **pipeline** for more complex workflows.
 
@@ -348,7 +343,7 @@ print(result)
 
 ---
 
-### 🧠 Memory Component
+### 🧠 [Memory Component](Memory)
 
 Memory in LangChain enables **conversation history management** for stateful interactions with LLMs. It allows applications to maintain context across multiple interactions, making conversations more coherent and personalized.
 
@@ -452,7 +447,7 @@ conversation = ConversationChain(llm=llm, memory=token_memory)
 
 ---
 
-### ⚡️ Runnables Componenet
+### ⚡️ [Runnables Componenet](Runnables)
 Runnables define how data flows through pipelines and give extremely fine-grained control over execution.
 
 Runnables are executable components that take an input → process it → return output.
@@ -486,7 +481,7 @@ Every runnable supports these methods:
 - .stream(input) → output streaming
 - | (pipe operator) → compose components like Unix pipelines
 
-#### 🧱 Runnable Primitives Explored
+#### 🧱 [Runnable Primitives](Runnable_Primitives)
 
 #### 1️⃣ RunnableSequence
 A sequence of steps executed one after another.
@@ -597,7 +592,7 @@ print(pipeline.invoke({"topic": "quantum mechanics"}))
 - All LLM components (models, retrievers, tools, prompts) convert into reusable runnables.
 - Runnables = the most powerful and flexible abstraction in LangChain.
 
-### 📄 Document Loaders
+### 📄 [Document Loaders](Document_Loaders)
 Document Loaders are the entry point of any retrieval or RAG pipeline.
 
 They help you load data from various sources—files, web pages, APIs, cloud storage, or entire directories—into a structured Document format that LangChain understands.
@@ -709,7 +704,7 @@ No matter what the original file format was.
 
 ---
 
-### ✂️ Text Splitter
+### ✂️ [Text Splitter](Text_Splitters)
 Text Splitters in LangChain are used to divide a document or text into smaller, more manageable chunks. These chunks can be processed individually for a variety of purposes, such as indexing, embedding, or semantic search. Text splitting is particularly useful when working with large documents that need to be broken down into smaller sections before being processed by models or passed to other components in the pipeline.
 
 LangChain provides several types of text splitters, each designed to split documents based on different criteria, such as length, structure, or semantic meaning. These splitters help ensure that the chunks are meaningful and usable for downstream tasks like semantic search or question-answering.
@@ -872,7 +867,7 @@ print(docs)
 ```
 
 
-#### 🧮 Vector Store
+#### 🧮 [Vector Store](Vector_Stores)
 
 A **Vector Store** is a storage system designed to store and manage vector embeddings. Vector embeddings are high-dimensional representations of text, images, or other data types that are generated by machine learning models. These embeddings capture semantic meaning in a way that allows for efficient similarity search, clustering, and other tasks in natural language processing (NLP) and AI.
 
@@ -930,7 +925,7 @@ LangChain supports integration with several popular vector stores, each offering
 
 ---
 
-### 🔍 Retrievers
+### 🔍 [Retrievers](Retrievers)
 
 Retrievers in LangChain are used to fetch relevant documents or information from a knowledge base or a vector store. They work by querying the data (e.g., vector stores, documents, or external APIs) and retrieving the most relevant pieces of information based on a user's query. The retrieved information is typically then passed to a model or another component for further processing, such as in Retrieval-Augmented Generation (RAG).
 
@@ -977,7 +972,7 @@ The retriever typically outputs a list of documents, each containing metadata (s
 }
 ```
 
-### 🧠 Retrieval Augmented Generation (RAG)
+### 🧠 [Retrieval Augmented Generation (RAG)](Rag)
 
 #### What is RAG?
 
@@ -1127,7 +1122,7 @@ Tools give them **capabilities beyond text**, enabling:
 
 Tools are the backbone of **agents**, **function calling**, and **complex pipelines**.
 
-#### 🛠️ Creating Tools in LangChain
+#### 🛠️ [Creating Tools in LangChain](Tools)
 
 LangChain provides multiple ways to define tools.  
 Below are the most common and most powerful methods.
@@ -1232,7 +1227,7 @@ A **Toolkit** is a pre-built collection of tools designed for a specific domain.
 - Build powerful agents quickly  
 
 
-### 🔧 Tool Calling in LangChain
+### 🔧 [Tool Calling in LangChain]((Tool_Calling))
 
 Tool Calling is a powerful mechanism that enables language models to **decide when to use a tool**, **generate the correct tool inputs**, and **execute the tool** to solve a task.  
 This makes LLMs more reliable, more accurate, and capable of performing real-world actions.
@@ -1304,7 +1299,7 @@ Tool Execution Includes:
 This pipeline is the foundation of **agents**, **function calling**, and **autonomous workflows** in LangChain.
 
 
-### 🤖 AI Agent
+### 🤖 [AI Agent](AI_Agents)
 
 An **AI agent** in this repository is built using Langchain, a powerful framework that allows you to create agents with different capabilities and behaviors. It leverages external tools and APIs to process and respond to user queries dynamically. This agent is designed to:
 
